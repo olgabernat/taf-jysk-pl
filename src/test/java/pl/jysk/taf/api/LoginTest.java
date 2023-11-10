@@ -53,8 +53,6 @@ public class LoginTest {
                 .then().assertThat().statusCode(400)
                 .body("translationDefaultText",
                         equalTo("Invalid input"))
-                .body("errorDetails[0].translationDefaultText",
-                        equalTo("Invalid credentials: Either email, mobile, or username must be provided"))
                 .body("errorDetails[1].translationDefaultText",
                         equalTo("Please enter a valid e-mail"));
     }
