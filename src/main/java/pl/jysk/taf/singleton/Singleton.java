@@ -27,5 +27,6 @@ public class Singleton {
             driver.quit();
             driver = null;
         }
+        logger.info("Driver is closed");
     }
 }

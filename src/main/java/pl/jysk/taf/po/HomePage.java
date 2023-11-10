@@ -1,5 +1,7 @@
 package pl.jysk.taf.po;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +16,7 @@ import static pl.jysk.taf.po.HomePageLocators.*;
 
 public class HomePage {
     private WebDriver driver;
+    private static final Logger logger = LogManager.getLogger();
 
     public HomePage() {
         this.driver = Singleton.getDriver();
@@ -21,12 +24,14 @@ public class HomePage {
 
     public void openHomePage() {
         driver.get("https://jysk.pl/");
+        logger.info("The site https://jysk.pl/ is opened");
     }
 
     public void closeCookie() {
         WebElement cookieIfoTextElement = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(COOKIE_TEXT_LOCATOR)));
         cookieIfoTextElement.click();
+        logger.info("Sent consent for cookies.");
     }
 
     public void closeAdvertisement() {
@@ -35,9 +40,11 @@ public class HomePage {
 
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].click();", closeAdvertisementButton);
+        logger.info("Advertisement closed.");
     }
 
     public String getCopyright() {
+        logger.info("Copywrite text received");
         return new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(COPYRIGHT_TEXT_LOCATOR)))
                 .getText();
@@ -46,10 +53,12 @@ public class HomePage {
     public void setInputSearchLineLocator(String query) {
         WebElement searchInputElement = driver.findElement(By.xpath(INPUT_SEARCH_LINE_LOCATOR));
         searchInputElement.sendKeys(query);
+        logger.info("Query sent to the search box:" + query);
     }
 
     public void clickButtonSearch() {
         WebElement submitWebElement = driver.findElement(By.xpath(BUTTON_SEARCH_LOCATOR));
         submitWebElement.click();
+        logger.info("A search is in progress");
     }
 }
