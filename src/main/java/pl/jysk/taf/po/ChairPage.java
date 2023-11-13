@@ -24,37 +24,56 @@ public class ChairPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void setCenaFilter(int minPrice, int maxPrice) {
+    public ChairPage clickCenaFilter() {
         WebElement selectCenaFilter = driver.findElement(By.xpath(CENA_FILTER_LOCATOR));
         selectCenaFilter.click();
         logger.info("A filter by price is applied.");
 
-        WebElement minPriceInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(MIN_PRICE_FILTER_LOCATOR)));
-        minPriceInput.clear();
+        return this;
+    }
+
+    public ChairPage setMinCenaFilter(int minPrice) {
+        WebElement minPriceInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(MIN_PRICE_LOCATOR)));
+        minPriceInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
         minPriceInput.sendKeys(String.valueOf(minPrice));
         logger.info("Min price - " + minPrice);
 
-        WebElement maxPriceInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(MAX_PRICE_LOCATOR)));
-        maxPriceInput.clear();
-        maxPriceInput.sendKeys(String.valueOf(maxPrice));
-        selectCenaFilter.click();
-        logger.info("Maximum price - " + maxPrice);
+        return this;
     }
 
-    public void setCategoryOfChair(String categoryName) {
+    public ChairPage setMaxCenaFilter(int maxPrice) {
+        WebElement maxPriceInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(MAX_PRICE_LOCATOR)));
+        maxPriceInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
+        maxPriceInput.sendKeys(String.valueOf(maxPrice));
+        logger.info("Maximum price - " + maxPrice);
+        return this;
+    }
+
+    public ChairPage clickCategoryFilter() {
         WebElement selectCategory = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(CATEGORY_LOCATOR)));
         selectCategory.click();
         logger.info("A filter by category is applied.");
+        return this;
+    }
 
+    public ChairPage setCategoryOfChair(String categoryName) {
         WebElement selectSpecificCategory = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id = '" + categoryName + "']")));
         selectSpecificCategory.click();
         logger.info("Selected category - " + categoryName);
+        return this;
+    }
 
+    public ChairPage sortListOfChair() {
         WebElement sortElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(SORT_LOCATOR)));
         sortElement.click();
+        return this;
+    }
+
+    public ChairPage sortListByRate() {
         WebElement specifySortElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(SORT_BY_RATING_LOCATOR)));
         specifySortElement.click();
         logger.info("List sorted by rating");
+        return this;
     }
 
     public List<String> getSearchResultText() {

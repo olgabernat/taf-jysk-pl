@@ -14,8 +14,15 @@ public class SearchTest extends BaseTest {
         homePage.setInputSearchLineLocator("Krzesła");
         homePage.clickButtonSearch();
         ChairPage chairPage = new ChairPage();
-        chairPage.setCenaFilter(450, 500);
-        chairPage.setCategoryOfChair("Krzesła biurowe");
+        chairPage.clickCenaFilter()
+                .setMinCenaFilter(450)
+                .setMaxCenaFilter(500)
+                .clickCenaFilter()
+                .clickCategoryFilter()
+                .setCategoryOfChair("Krzesła biurowe")
+                .clickCategoryFilter()
+                .sortListOfChair()
+                .sortListByRate();
 
         List<String> actualChairsList = chairPage.getSearchResultText();
         String expectedString = "Krzesło biurowe";
