@@ -8,7 +8,7 @@ The project is an automated testing framework designed for testing the jysk.pl w
 - **Programming Language:** Java
 - **Unit Testing Framework:** Used one of the popular unit testing frameworks
 - **Best Practices:** Followed best practices and coding conventions
-- **Version Control:** Project hosted on a remote repository https://github.com/olgabernat/taf-jysk-pl
+- **Version Control:** Project hosted on a remote [repository](https://github.com/olgabernat/taf-jysk-pl)
 
 ## Project Structure
 ### Test Automation
