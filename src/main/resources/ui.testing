@@ -5,9 +5,11 @@
         <classes>
             <class name="api.BaseUrlTest"/>
             <class name="api.LoginTest"/>
+            <class name="api.SearchApiTest"/>
             <class name="ui.BaseTest"/>
             <class name="ui.HomePageTest"/>
             <class name="ui.SearchTest"/>
+            <class name="ui.LoginPageTest"/>
         </classes>
     </test>
 </suite>

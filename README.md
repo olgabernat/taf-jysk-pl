@@ -13,7 +13,7 @@ The project is an automated testing framework designed for testing the jysk.pl w
 ## Project Structure
 ### Test Automation
 
-The project covers both UI (User Interface) and API (Application Programming Interface) testing for the website.
+The project encompasses both UI (User Interface) and API (Application Programming Interface) testing for the JYSK website.
 
 ### Maven Integration
 
@@ -36,11 +36,14 @@ The project is managed using Maven for dependency management and project build.
 
 - `BaseUrlTest`: Tests related to the base URL of the API.
 - `LoginTest`: Tests related to user login through the API.
+- `SearchApiTests`:  API tests for the search functionality.
 
 #### UI Tests
 
 - `BaseTest`: Base test class for common functionalities.
 - `HomePageTest`: Tests related to the homepage of the jysk.pl website.
+- `SearchTest`: Tests related to the search functionality.
+- `LoginPageTest`: Tests related to the user login functionality.
 - `SearchTest`: Tests related to the search functionality.
 
 ### Java Classes
@@ -49,6 +52,8 @@ The project is managed using Maven for dependency management and project build.
 - `ChairPageLocators`: Contains locators for elements on the chair page.
 - `HomePage`: Represents the functionality of the homepage.
 - `HomePageLocators`: Contains locators for elements on the homepage.
+- `LoginPage`: Represents the functionality of the login page.
+- `LoginPageLocators`: Contains locators for elements on the login page.
 
 ## How to Run the Tests
 
@@ -58,10 +63,11 @@ The project is managed using Maven for dependency management and project build.
 
 ## Jenkins Integration
 
-A Jenkins job has been set up to download the project at scheduled intervals and run the tests.
+Jenkins job has been set up to download the project every 9 minutes and run the tests.
 
 ## Reporting
 
 Reporting is integrated into the project, allowing local test execution and report generation.
 
+The project is maintained by Olga Bernat.
 Feel free to explore the project and contribute to its improvement!
