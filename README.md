@@ -1,4 +1,4 @@
-# TAF - Automated Testing Framework for https://jysk.pl/
+# TAF - Automated Testing Framework for [JYSK Poland](https://jysk.pl/)
 
 ## Overview
 The project is an automated testing framework designed for testing the jysk.pl website, which offers a variety of home goods.
