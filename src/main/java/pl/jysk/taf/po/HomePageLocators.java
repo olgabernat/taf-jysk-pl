@@ -7,4 +7,5 @@ public class HomePageLocators {
     public static final String SEARCH_BUTTON_LOCATOR = "//span[@class = 'search-input-text']";
     public static final String ADVERTISEMENT_LOCATOR = "//div[@class='close-x']";
     public static final String LOGIN_BUTTON_LOCATOR = "//span[@class='icon-text text-uppercase py-1 d-block' and text()='Zaloguj się']";
+    public static final String SEARCH_ERROR_TEXT_LOCATOR = "//div[@role = 'alert']";
 }

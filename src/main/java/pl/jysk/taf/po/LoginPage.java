@@ -52,7 +52,7 @@ public class LoginPage {
     public String getErrorMessage() {
         logger.info("Received a login error");
         return new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ERROR_TEXT_LOCATOR)))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ERROR_LOGIN_TEXT_LOCATOR)))
                 .getText();
     }
 

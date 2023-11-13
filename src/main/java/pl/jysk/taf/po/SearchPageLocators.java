@@ -1,6 +1,6 @@
 package pl.jysk.taf.po;
 
-public class ChairPageLocators {
+public class SearchPageLocators {
     public static final String PRICE_FILTER_LOCATOR = "//span[text()='Cena']";
     public static final String MIN_PRICE_LOCATOR = "//input[@placeholder='Min']";
     public static final String MAX_PRICE_LOCATOR = "//input[@placeholder='Max']";
@@ -9,4 +9,5 @@ public class ChairPageLocators {
     public static final String SORT_LOCATOR = "//select[@class='form-control product-list-sort-select ']";
     public static final String SORT_BY_RATING_LOCATOR = "//option[@value='rating_desc']";
     public static final String PRICE_LOCATOR = "//span[@class='product-price-value']";
+    public static final String ERROR_SEARCH_TEXT_LOCATOR = "//h2[@class = 'text-uppercase mb-4']";
 }

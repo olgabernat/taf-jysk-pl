@@ -11,27 +11,28 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import static pl.jysk.taf.po.ChairPageLocators.*;
+import static pl.jysk.taf.po.LoginPageLocators.ALERT_TEXT_LOCATOR;
+import static pl.jysk.taf.po.SearchPageLocators.*;
 
 
-public class ChairPage {
+public class SearchPage {
     private WebDriver driver;
     private WebDriverWait wait;
     private static final Logger logger = LogManager.getLogger();
 
-    public ChairPage() {
+    public SearchPage() {
         this.driver = Singleton.getDriver();
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public ChairPage clickPriceFilter() {
+    public SearchPage clickPriceFilter() {
         WebElement selectPriceFilter = driver.findElement(By.xpath(PRICE_FILTER_LOCATOR));
         selectPriceFilter.click();
         logger.info("A filter by price is applied.");
         return this;
     }
 
-    public ChairPage setMinPriceFilter(int minPrice) {
+    public SearchPage setMinPriceFilter(int minPrice) {
         WebElement minPriceInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(MIN_PRICE_LOCATOR)));
         minPriceInput.click();
         minPriceInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
@@ -40,7 +41,7 @@ public class ChairPage {
         return this;
     }
 
-    public ChairPage setMaxCenaFilter(int maxPrice) {
+    public SearchPage setMaxCenaFilter(int maxPrice) {
         WebElement maxPriceInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(MAX_PRICE_LOCATOR)));
         maxPriceInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
         maxPriceInput.sendKeys(String.valueOf(maxPrice));
@@ -48,14 +49,14 @@ public class ChairPage {
         return this;
     }
 
-    public ChairPage clickCategoryFilter() {
+    public SearchPage clickCategoryFilter() {
         WebElement selectCategory = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(CATEGORY_LOCATOR)));
         selectCategory.click();
         logger.info("A filter by category is applied.");
         return this;
     }
 
-    public ChairPage setCategoryOfChair(String categoryName) {
+    public SearchPage setCategoryOfChair(String categoryName) {
         WebElement selectSpecificCategory = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id = '" + categoryName + "']")));
         selectSpecificCategory.click();
         driver.navigate().refresh();
@@ -63,23 +64,22 @@ public class ChairPage {
         return this;
     }
 
-    public ChairPage sortListOfChair() {
+    public SearchPage sortListOfChair() {
         WebElement sortElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(SORT_LOCATOR)));
         sortElement.click();
         return this;
     }
 
-    public ChairPage sortListByRate() {
+    public SearchPage sortListByRate() {
         WebElement specifySortElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(SORT_BY_RATING_LOCATOR)));
         specifySortElement.click();
         logger.info("List sorted by rating");
         return this;
     }
 
-    public List<String> getSearchResultText() {
+    public List<String> getSearchResultText(int numberOfElements) {
         List<String> chairsNames = new ArrayList<>();
         logger.info("A list with search results has been created");
-        int numberOfElements = 3;
 
         for (int i = 0; i < numberOfElements; i++) {
             WebElement chairElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(CHAIR_TEXT_LOCATOR)));
@@ -98,5 +98,11 @@ public class ChairPage {
             chairsPrices.add(Integer.parseInt(chairPriceElement.getText().replaceAll("[^0-9]", "")));
         }
         return chairsPrices;
+    }
+
+    public String getErrorSearchMessage() {
+        return new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ERROR_SEARCH_TEXT_LOCATOR)))
+                .getText();
     }
 }

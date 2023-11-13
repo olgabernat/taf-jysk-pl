@@ -67,4 +67,10 @@ public class HomePage {
         loginWebElement.click();
         logger.info("Login page is opened");
     }
+
+    public String getSearchErrorText() {
+        return new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(SEARCH_ERROR_TEXT_LOCATOR)))
+                .getText();
+    }
 }
