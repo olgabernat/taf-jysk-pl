@@ -59,6 +59,7 @@ public class ChairPage {
     public ChairPage setCategoryOfChair(String categoryName) {
         WebElement selectSpecificCategory = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id = '" + categoryName + "']")));
         selectSpecificCategory.click();
+        driver.navigate().refresh();
         logger.info("Selected category - " + categoryName);
         return this;
     }
