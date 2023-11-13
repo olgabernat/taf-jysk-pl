@@ -7,6 +7,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class LoginTest {
+    private static final String BASE_URL = "https://jysk.pl/wss/json/v2/data/customer/session";
     @DisplayName("Check login with empty data")
     @Test
     public void testPostEmptyEmailAndPassword() {
@@ -15,7 +16,7 @@ public class LoginTest {
                 "    \"password\": \"\"\n" +
                 "}";
         given().header("Content-Type", "application/json").body(body).
-                when().post("https://jysk.pl/wss/json/v2/data/customer/session")
+                when().post(BASE_URL)
                 .then().assertThat().statusCode(400)
                 .body("translationDefaultText",
                         equalTo("Invalid input"))
@@ -33,7 +34,7 @@ public class LoginTest {
                 "    \"password\": \"\"\n" +
                 "}";
         given().header("Content-Type", "application/json").body(body).
-                when().post("https://jysk.pl/wss/json/v2/data/customer/session")
+                when().post(BASE_URL)
                 .then().assertThat().statusCode(401)
                 .body("translationDefaultText",
                         equalTo("Insufficient permissions"))
@@ -49,7 +50,7 @@ public class LoginTest {
                 "    \"password\": \"123456aA\"\n" +
                 "}";
         given().header("Content-Type", "application/json").body(body).
-                when().post("https://jysk.pl/wss/json/v2/data/customer/session")
+                when().post(BASE_URL)
                 .then().assertThat().statusCode(400)
                 .body("translationDefaultText",
                         equalTo("Invalid input"))
@@ -65,7 +66,7 @@ public class LoginTest {
                 "    \"password\": \"123456aA\"\n" +
                 "}";
         given().header("Content-Type", "application/json").body(body).
-                when().post("https://jysk.pl/wss/json/v2/data/customer/session")
+                when().post(BASE_URL)
                 .then().assertThat().statusCode(401)
                 .body("translationDefaultText",
                         equalTo("Insufficient permissions"))
@@ -80,7 +81,7 @@ public class LoginTest {
                 "    \"email\": \"test@test.com\"\n" +
                 "}";
         given().header("Content-Type", "application/json").body(body).
-                when().post("https://jysk.pl/wss/json/v2/data/customer/session")
+                when().post(BASE_URL)
                 .then().assertThat().statusCode(400)
                 .body("translationDefaultText",
                         equalTo("Invalid input"))
@@ -95,7 +96,7 @@ public class LoginTest {
                 "    \"password\": \"123456aA\"\n" +
                 "}";
         given().header("Content-Type", "application/json").body(body).
-                when().post("https://jysk.pl/wss/json/v2/data/customer/session")
+                when().post(BASE_URL)
                 .then().assertThat().statusCode(400)
                 .body("translationDefaultText",
                         equalTo("Invalid input"))
