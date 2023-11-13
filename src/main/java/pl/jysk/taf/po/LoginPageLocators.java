@@ -6,4 +6,5 @@ public class LoginPageLocators {
     public static final String PASSWORD_INPUT_LOCATOR = "//input[@name='password']";
     public static final String LOGIN_BUTTON_LOCATOR = "//button[@type='submit' and span[text()='Zaloguj się']]";
     public static final String ERROR_TEXT_LOCATOR = "//div[@class='form-errors']";
+    public static final String ALERT_TEXT_LOCATOR = "//div[@role='alert']";
 }

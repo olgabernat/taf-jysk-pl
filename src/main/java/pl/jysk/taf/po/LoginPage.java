@@ -52,4 +52,10 @@ public class LoginPage {
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ERROR_TEXT_LOCATOR)))
                 .getText();
     }
+
+    public String getAlertMessage () {
+        return new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ALERT_TEXT_LOCATOR)))
+                .getText();
+    }
 }
