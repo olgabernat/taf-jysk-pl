@@ -1,9 +1,11 @@
 package pl.jysk.taf.ui;
 
+import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pl.jysk.taf.po.HomePage;
 import pl.jysk.taf.po.LoginPage;
+import pl.jysk.taf.util.Utils;
 
 public class LoginPageTest extends BaseTest {
     @Test
@@ -22,12 +24,13 @@ public class LoginPageTest extends BaseTest {
         HomePage homePage = new HomePage();
         homePage.clickButtonLogin();
         LoginPage loginPage = new LoginPage();
-        loginPage.enterEmail("test@test.com")
-                .enterPassword("test123")
+        String randomEmail = Utils.generateRandomEmail();
+        loginPage.enterEmail(randomEmail)
+                .enterPassword(Utils.generatePassword())
                 .clickLoginButton();
 
         String actualError = loginPage.getErrorMessage();
-        String expectedError = "Login of test@test.com failed";
+        String expectedError = "Login of " + randomEmail + " failed";
         Assertions.assertEquals(expectedError, actualError);
     }
 
@@ -36,7 +39,8 @@ public class LoginPageTest extends BaseTest {
         HomePage homePage = new HomePage();
         homePage.clickButtonLogin();
         LoginPage loginPage = new LoginPage();
-        loginPage.enterEmail("test@test.com")
+        Faker faker = new Faker();
+        loginPage.enterEmail(faker.internet().emailAddress())
                 .enterPassword("")
                 .clickLoginButton();
 
@@ -50,8 +54,9 @@ public class LoginPageTest extends BaseTest {
         HomePage homePage = new HomePage();
         homePage.clickButtonLogin();
         LoginPage loginPage = new LoginPage();
+        Faker faker = new Faker();
         loginPage.enterEmail("")
-                .enterPassword("test123")
+                .enterPassword(faker.internet().password())
                 .clickLoginButton();
 
         String actualError = loginPage.getAlertMessage();
@@ -65,7 +70,7 @@ public class LoginPageTest extends BaseTest {
         homePage.clickButtonLogin();
         LoginPage loginPage = new LoginPage();
         loginPage.enterEmail("qwer")
-                .enterPassword("test123")
+                .enterPassword(Utils.generatePassword())
                 .clickLoginButton();
 
         String actualError = loginPage.getAlertMessage();
