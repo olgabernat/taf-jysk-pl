@@ -32,7 +32,7 @@ public class ChairPage {
     }
 
     public ChairPage setMinPriceFilter(int minPrice) {
-        WebElement minPriceInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(MIN_PRICE_LOCATOR)));
+        WebElement minPriceInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(MIN_PRICE_LOCATOR)));
         minPriceInput.click();
         minPriceInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
         minPriceInput.sendKeys(String.valueOf(minPrice));
