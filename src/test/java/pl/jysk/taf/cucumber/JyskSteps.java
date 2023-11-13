@@ -8,25 +8,20 @@ import pl.jysk.taf.po.HomePage;
 
 public class JyskSteps {
     public static HomePage homePage;
-    private static String query1;
 
-    @Given("User is on the HomePage")
+    @When("User is on the HomePage")
     public static void userOpenHomePage() {
         homePage = new HomePage();
         homePage.openHomePage();
         homePage.closeCookie();
+        homePage.closeAdvertisement();
     }
 
-    @When("User enters {string} and click search button")
-    public static void userEnterSearchQueryAndClickSearch(String query) {
-        query1 = query;
-        homePage.setInputSearchLineLocator(query1);
-        homePage.clickButtonSearch();
+    @Then("User received copywriter text")
+    public static void userReceivedCopywriterText() {
+        HomePage homePage = new HomePage();
+        String actualCopywriterText = homePage.getCopyright();
+        String extendsCopywriterText = "NIP 586-20-16-763 Sąd Rejonowy Gdańsk-Północ VII Wydz. Gospodarczy KRS 0000036908 ";
+        Assertions.assertEquals(extendsCopywriterText, actualCopywriterText);
     }
-
-    @Then("Search result equals to expected result")
-    public static void userGetResult() {
-        Assertions.assertEquals("а","g");
-    }
-// дописать список
 }

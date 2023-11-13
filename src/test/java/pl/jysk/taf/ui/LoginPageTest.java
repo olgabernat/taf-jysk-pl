@@ -11,6 +11,7 @@ public class LoginPageTest extends BaseTest {
         HomePage homePage = new HomePage();
         homePage.clickButtonLogin();
         LoginPage loginPage = new LoginPage();
+
         String actualCopywriterText = loginPage.getCopyright();
         String expectedCopywriterText = "Zaloguj się";
         Assertions.assertEquals(expectedCopywriterText, actualCopywriterText);
@@ -71,5 +72,4 @@ public class LoginPageTest extends BaseTest {
         String expectedError = "Wprowadź poprawny adres e-mail.";
         Assertions.assertEquals(expectedError, actualError);
     }
-
 }

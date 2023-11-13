@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("Search API Tests")
+
 public class SearchApiTests {
     private static final String BASE_URL = "https://jysk.pl/search";
 
