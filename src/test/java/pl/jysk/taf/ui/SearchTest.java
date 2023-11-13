@@ -14,10 +14,10 @@ public class SearchTest extends BaseTest {
         homePage.setInputSearchLineLocator("Krzesła");
         homePage.clickButtonSearch();
         ChairPage chairPage = new ChairPage();
-        chairPage.clickCenaFilter()
-                .setMinCenaFilter(450)
+        chairPage.clickPriceFilter()
+                .setMinPriceFilter(450)
                 .setMaxCenaFilter(500)
-                .clickCenaFilter()
+                .clickPriceFilter()
                 .clickCategoryFilter()
                 .setCategoryOfChair("Krzesła biurowe")
                 .clickCategoryFilter()

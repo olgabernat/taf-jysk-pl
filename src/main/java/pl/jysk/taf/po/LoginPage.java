@@ -11,7 +11,6 @@ import pl.jysk.taf.singleton.Singleton;
 
 import java.time.Duration;
 
-import static pl.jysk.taf.po.HomePageLocators.INPUT_SEARCH_LINE_LOCATOR;
 import static pl.jysk.taf.po.LoginPageLocators.*;
 
 public class LoginPage {
@@ -30,18 +29,21 @@ public class LoginPage {
     }
 
     public LoginPage enterEmail (String email) {
+        logger.info("Enter email: " + email);
         WebElement emailInputElement = driver.findElement(By.xpath(EMAIL_INPUT_LOCATOR));
         emailInputElement.sendKeys(email);
         return this;
     }
 
     public LoginPage enterPassword (String password) {
+        logger.info("Enter email: " + password);
         WebElement passwordInputElement = driver.findElement(By.xpath(PASSWORD_INPUT_LOCATOR));
         passwordInputElement.sendKeys(password);
         return this;
     }
 
     public LoginPage clickLoginButton () {
+        logger.info("Attempting to log in to an account");
         WebElement loginButtonElement = driver.findElement(By.xpath(LOGIN_BUTTON_LOCATOR));
         loginButtonElement.click();
         return this;

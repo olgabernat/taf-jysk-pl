@@ -1,7 +1,7 @@
 package pl.jysk.taf.po;
 
 public class ChairPageLocators {
-    public static final String CENA_FILTER_LOCATOR = "//span[text()='Cena']";
+    public static final String PRICE_FILTER_LOCATOR = "//span[text()='Cena']";
     public static final String MIN_PRICE_LOCATOR = "//input[@placeholder='Min']";
     public static final String MAX_PRICE_LOCATOR = "//input[@placeholder='Max']";
     public static final String CATEGORY_LOCATOR = "//span[text()='Kategoria']";

@@ -24,20 +24,18 @@ public class ChairPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public ChairPage clickCenaFilter() {
-        WebElement selectCenaFilter = driver.findElement(By.xpath(CENA_FILTER_LOCATOR));
-        selectCenaFilter.click();
+    public ChairPage clickPriceFilter() {
+        WebElement selectPriceFilter = driver.findElement(By.xpath(PRICE_FILTER_LOCATOR));
+        selectPriceFilter.click();
         logger.info("A filter by price is applied.");
-
         return this;
     }
 
-    public ChairPage setMinCenaFilter(int minPrice) {
+    public ChairPage setMinPriceFilter(int minPrice) {
         WebElement minPriceInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(MIN_PRICE_LOCATOR)));
         minPriceInput.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.BACK_SPACE);
         minPriceInput.sendKeys(String.valueOf(minPrice));
         logger.info("Min price - " + minPrice);
-
         return this;
     }
 
