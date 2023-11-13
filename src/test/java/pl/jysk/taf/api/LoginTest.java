@@ -1,5 +1,7 @@
 package pl.jysk.taf.api;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +11,7 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.equalTo;
 
 public class LoginTest {
+    private static final Logger logger = LogManager.getLogger();
     private static final String BASE_URL = "https://jysk.pl/wss/json/v2/data/customer/session";
 
     @DisplayName("Check login with empty data")
@@ -18,6 +21,7 @@ public class LoginTest {
                 "    \"email\": \"\",\n" +
                 "    \"password\": \"\"\n" +
                 "}";
+        logger.info("Request body: " + body);
         String expectedError1 = "Invalid credentials: Either email, mobile, or username must be provided";
         String expectedError2 = "Please enter a valid e-mail";
 
@@ -36,6 +40,7 @@ public class LoginTest {
                 "    \"email\": \"test@test.com\",\n" +
                 "    \"password\": \"\"\n" +
                 "}";
+        logger.info("Request body: " + body);
 
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
@@ -51,6 +56,7 @@ public class LoginTest {
                 "    \"email\": \"\",\n" +
                 "    \"password\": \"123456aA\"\n" +
                 "}";
+        logger.info("Request body: " + body);
         String expectedError1 = "Invalid credentials: Either email, mobile, or username must be provided";
         String expectedError2 = "Please enter a valid e-mail";
 
@@ -68,6 +74,7 @@ public class LoginTest {
                 "    \"email\": \"test@test.com\",\n" +
                 "    \"password\": \"123456aA\"\n" +
                 "}";
+        logger.info("Request body: " + body);
 
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
@@ -83,6 +90,7 @@ public class LoginTest {
         String body = "{\n" +
                 "    \"email\": \"test@test.com\"\n" +
                 "}";
+        logger.info("Request body: " + body);
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
                 .then().assertThat().statusCode(400)
@@ -97,6 +105,7 @@ public class LoginTest {
         String body = "{\n" +
                 "    \"password\": \"123456aA\"\n" +
                 "}";
+        logger.info("Request body: " + body);
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
                 .then().assertThat().statusCode(400)

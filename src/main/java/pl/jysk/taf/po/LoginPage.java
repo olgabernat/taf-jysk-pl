@@ -28,34 +28,36 @@ public class LoginPage {
                 .getText();
     }
 
-    public LoginPage enterEmail (String email) {
+    public LoginPage enterEmail(String email) {
         logger.info("Enter email: " + email);
         WebElement emailInputElement = driver.findElement(By.xpath(EMAIL_INPUT_LOCATOR));
         emailInputElement.sendKeys(email);
         return this;
     }
 
-    public LoginPage enterPassword (String password) {
+    public LoginPage enterPassword(String password) {
         logger.info("Enter email: " + password);
         WebElement passwordInputElement = driver.findElement(By.xpath(PASSWORD_INPUT_LOCATOR));
         passwordInputElement.sendKeys(password);
         return this;
     }
 
-    public LoginPage clickLoginButton () {
+    public LoginPage clickLoginButton() {
         logger.info("Attempting to log in to an account");
         WebElement loginButtonElement = driver.findElement(By.xpath(LOGIN_BUTTON_LOCATOR));
         loginButtonElement.click();
         return this;
     }
 
-    public String getErrorMessage () {
+    public String getErrorMessage() {
+        logger.info("Received a login error");
         return new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ERROR_TEXT_LOCATOR)))
                 .getText();
     }
 
-    public String getAlertMessage () {
+    public String getAlertMessage() {
+        logger.info("Received an error for the field");
         return new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(ALERT_TEXT_LOCATOR)))
                 .getText();
