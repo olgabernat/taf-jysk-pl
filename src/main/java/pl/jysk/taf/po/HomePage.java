@@ -57,8 +57,14 @@ public class HomePage {
     }
 
     public void clickButtonSearch() {
-        WebElement submitWebElement = driver.findElement(By.xpath(BUTTON_SEARCH_LOCATOR));
+        WebElement submitWebElement = driver.findElement(By.xpath(SEARCH_BUTTON_LOCATOR));
         submitWebElement.click();
         logger.info("A search is in progress");
+    }
+
+    public void clickButtonLogin() {
+        WebElement loginWebElement = driver.findElement(By.xpath(LOGIN_BUTTON_LOCATOR));
+        loginWebElement.click();
+        logger.info("Login page is opened");
     }
 }

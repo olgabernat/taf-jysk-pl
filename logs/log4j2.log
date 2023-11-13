@@ -1,117 +1,115 @@
-2023-11-10 12:09:52,298 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:10:01,454 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:10:04,095 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:24:18,401 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:24:26,528 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:24:27,071 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:24:32,809 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:24:34,772 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:27:14,490 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:27:22,231 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:27:22,724 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:27:28,406 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:27:31,061 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:28:37,275 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:28:45,513 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:28:46,070 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:28:51,749 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:28:53,503 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:32:08,264 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:32:15,909 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:32:16,711 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:32:22,301 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 12:32:24,250 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:35:43,738 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:35:50,123 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:35:50,581 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:35:52,383 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:35:52,386 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:35:52,387 INFO p.j.t.p.HomePage [main] Copywrite text received
-2023-11-10 13:35:52,979 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:35:58,318 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:35:58,755 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:36:00,269 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:36:00,270 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:36:00,595 INFO p.j.t.p.HomePage [main] Query sent to the search box:Krzes?a
-2023-11-10 13:36:02,904 INFO p.j.t.p.HomePage [main] A search is in progress
-2023-11-10 13:36:02,906 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:36:03,627 INFO p.j.t.p.ChairPage [main] A filter by price is applied.
-2023-11-10 13:36:04,106 INFO p.j.t.p.ChairPage [main] Min price - 450
-2023-11-10 13:36:04,838 INFO p.j.t.p.ChairPage [main] Maximum price - 500
-2023-11-10 13:36:05,084 INFO p.j.t.p.ChairPage [main] A filter by category is applied.
-2023-11-10 13:36:05,512 INFO p.j.t.p.ChairPage [main] Selected category - Krzes?a biurowe
-2023-11-10 13:36:05,959 INFO p.j.t.p.ChairPage [main] List sorted by rating
-2023-11-10 13:36:05,960 INFO p.j.t.p.ChairPage [main] A list with search results has been created[]
-2023-11-10 13:36:06,110 INFO p.j.t.p.ChairPage [main] Created list with prices of goods[]
-2023-11-10 13:42:03,446 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:42:09,979 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:42:10,981 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:42:12,343 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:42:12,343 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:42:12,343 INFO p.j.t.p.HomePage [main] Copywrite text received
-2023-11-10 13:42:12,769 INFO p.j.t.s.Singleton [main] Driver is closed
-2023-11-10 13:42:12,803 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:42:16,486 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:42:17,054 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:42:19,205 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:42:19,206 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:42:19,427 INFO p.j.t.p.HomePage [main] Query sent to the search box:Krzes?a
-2023-11-10 13:42:21,388 INFO p.j.t.p.HomePage [main] A search is in progress
-2023-11-10 13:42:21,392 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:42:21,926 INFO p.j.t.p.ChairPage [main] A filter by price is applied.
-2023-11-10 13:42:22,339 INFO p.j.t.p.ChairPage [main] Min price - 450
-2023-11-10 13:42:23,242 INFO p.j.t.p.ChairPage [main] Maximum price - 500
-2023-11-10 13:42:23,392 INFO p.j.t.p.ChairPage [main] A filter by category is applied.
-2023-11-10 13:42:23,946 INFO p.j.t.p.ChairPage [main] Selected category - Krzes?a biurowe
-2023-11-10 13:42:24,365 INFO p.j.t.p.ChairPage [main] List sorted by rating
-2023-11-10 13:42:24,368 INFO p.j.t.p.ChairPage [main] A list with search results has been created
-2023-11-10 13:42:24,523 INFO p.j.t.p.ChairPage [main] Created list with prices of goods
-2023-11-10 13:42:25,129 INFO p.j.t.s.Singleton [main] Driver is closed
-2023-11-10 13:46:21,664 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:46:27,808 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:46:28,413 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:46:30,084 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:46:30,084 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:46:30,085 INFO p.j.t.p.HomePage [main] Copywrite text received
-2023-11-10 13:46:30,939 INFO p.j.t.s.Singleton [main] Driver is closed
-2023-11-10 13:46:31,013 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:46:35,195 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:46:35,830 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:46:37,257 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:46:37,259 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:46:37,410 INFO p.j.t.p.HomePage [main] Query sent to the search box:Krzes?a
-2023-11-10 13:46:39,888 INFO p.j.t.p.HomePage [main] A search is in progress
-2023-11-10 13:46:39,890 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:46:40,484 INFO p.j.t.p.ChairPage [main] A filter by price is applied.
-2023-11-10 13:46:40,975 INFO p.j.t.p.ChairPage [main] Min price - 450
-2023-11-10 13:46:41,712 INFO p.j.t.p.ChairPage [main] Maximum price - 500
-2023-11-10 13:46:42,398 INFO p.j.t.p.ChairPage [main] A filter by category is applied.
-2023-11-10 13:46:42,902 INFO p.j.t.p.ChairPage [main] Selected category - Krzes?a biurowe
-2023-11-10 13:46:43,442 INFO p.j.t.p.ChairPage [main] List sorted by rating
-2023-11-10 13:46:43,443 INFO p.j.t.p.ChairPage [main] A list with search results has been created
-2023-11-10 13:46:43,537 INFO p.j.t.p.ChairPage [main] Created list with prices of goods
-2023-11-10 13:46:44,155 INFO p.j.t.s.Singleton [main] Driver is closed
-2023-11-10 13:47:22,475 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:47:28,840 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:47:29,352 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:47:31,652 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:47:31,653 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:47:31,653 INFO p.j.t.p.HomePage [main] Copywrite text received
-2023-11-10 13:47:32,157 INFO p.j.t.s.Singleton [main] Driver is closed
-2023-11-10 13:47:32,197 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:47:34,232 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
-2023-11-10 13:47:37,002 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
-2023-11-10 13:47:38,250 INFO p.j.t.p.HomePage [main] Advertisement closed.
-2023-11-10 13:47:38,251 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:47:38,422 INFO p.j.t.p.HomePage [main] Query sent to the search box:Krzes?a
-2023-11-10 13:47:40,357 INFO p.j.t.p.HomePage [main] A search is in progress
-2023-11-10 13:47:40,359 INFO p.j.t.s.Singleton [main] Perform driver
-2023-11-10 13:47:41,030 INFO p.j.t.p.ChairPage [main] A filter by price is applied.
-2023-11-10 13:47:41,456 INFO p.j.t.p.ChairPage [main] Min price - 450
-2023-11-10 13:47:41,964 INFO p.j.t.p.ChairPage [main] Maximum price - 500
-2023-11-10 13:47:42,229 INFO p.j.t.p.ChairPage [main] A filter by category is applied.
-2023-11-10 13:47:42,610 INFO p.j.t.p.ChairPage [main] Selected category - Krzes?a biurowe
-2023-11-10 13:47:43,116 INFO p.j.t.p.ChairPage [main] List sorted by rating
-2023-11-10 13:47:43,116 INFO p.j.t.p.ChairPage [main] A list with search results has been created
-2023-11-10 13:47:43,239 INFO p.j.t.p.ChairPage [main] Created list with prices of goods
-2023-11-10 13:47:43,784 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:13:08,597 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:13:15,216 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:13:15,794 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:13:17,100 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:13:17,110 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:13:17,110 INFO p.j.t.p.LoginPage [main] Copywrite text on the Login page received
+2023-11-13 13:13:17,627 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:21:00,417 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:21:06,677 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:21:07,028 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:21:08,608 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:21:08,613 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:21:10,177 INFO p.j.t.p.HomePage [main] Login page is opened
+2023-11-13 13:21:10,179 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:21:10,180 INFO p.j.t.p.LoginPage [main] Copywrite text on the Login page received
+2023-11-13 13:21:10,789 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:22:11,924 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:17,300 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:22:17,637 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:22:19,123 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:22:19,123 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:19,124 INFO p.j.t.p.HomePage [main] Copywrite text received
+2023-11-13 13:22:19,584 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:22:19,643 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:22,891 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:22:23,219 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:22:24,714 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:22:24,715 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:26,163 INFO p.j.t.p.HomePage [main] Login page is opened
+2023-11-13 13:22:26,167 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:26,168 INFO p.j.t.p.LoginPage [main] Copywrite text on the Login page received
+2023-11-13 13:22:26,796 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:22:26,826 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:30,270 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:22:30,641 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:22:32,356 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:22:32,356 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:32,537 INFO p.j.t.p.HomePage [main] Query sent to the search box:Krzes?a
+2023-11-13 13:22:34,184 INFO p.j.t.p.HomePage [main] A search is in progress
+2023-11-13 13:22:34,187 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:22:34,626 INFO p.j.t.p.ChairPage [main] A filter by price is applied.
+2023-11-13 13:22:34,982 INFO p.j.t.p.ChairPage [main] Min price - 450
+2023-11-13 13:22:35,634 INFO p.j.t.p.ChairPage [main] Maximum price - 500
+2023-11-13 13:22:35,774 INFO p.j.t.p.ChairPage [main] A filter by category is applied.
+2023-11-13 13:22:36,293 INFO p.j.t.p.ChairPage [main] Selected category - Krzes?a biurowe
+2023-11-13 13:22:36,787 INFO p.j.t.p.ChairPage [main] List sorted by rating
+2023-11-13 13:22:36,787 INFO p.j.t.p.ChairPage [main] A list with search results has been created
+2023-11-13 13:22:36,952 INFO p.j.t.p.ChairPage [main] Created list with prices of goods
+2023-11-13 13:22:37,476 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:34:37,217 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:42,632 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:34:42,942 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:34:44,472 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:34:44,472 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:44,473 INFO p.j.t.p.HomePage [main] Copywrite text received
+2023-11-13 13:34:44,947 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:34:45,010 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:48,276 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:34:48,630 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:34:50,019 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:34:50,020 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:51,443 INFO p.j.t.p.HomePage [main] Login page is opened
+2023-11-13 13:34:51,445 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:51,445 INFO p.j.t.p.LoginPage [main] Copywrite text on the Login page received
+2023-11-13 13:34:52,042 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 13:34:52,097 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:55,341 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 13:34:55,676 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 13:34:57,497 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 13:34:57,498 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:57,669 INFO p.j.t.p.HomePage [main] Query sent to the search box:Krzes?a
+2023-11-13 13:34:59,339 INFO p.j.t.p.HomePage [main] A search is in progress
+2023-11-13 13:34:59,342 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 13:34:59,669 INFO p.j.t.p.ChairPage [main] A filter by price is applied.
+2023-11-13 13:35:00,120 INFO p.j.t.p.ChairPage [main] Min price - 450
+2023-11-13 13:35:00,844 INFO p.j.t.p.ChairPage [main] Maximum price - 500
+2023-11-13 13:35:00,969 INFO p.j.t.p.ChairPage [main] A filter by category is applied.
+2023-11-13 13:35:01,534 INFO p.j.t.p.ChairPage [main] Selected category - Krzes?a biurowe
+2023-11-13 13:35:01,903 INFO p.j.t.p.ChairPage [main] List sorted by rating
+2023-11-13 13:35:01,903 INFO p.j.t.p.ChairPage [main] A list with search results has been created
+2023-11-13 13:35:02,040 INFO p.j.t.p.ChairPage [main] Created list with prices of goods
+2023-11-13 13:35:02,605 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 14:01:13,832 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:19,078 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 14:01:19,749 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 14:01:20,931 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 14:01:20,931 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:20,931 INFO p.j.t.p.HomePage [main] Copywrite text received
+2023-11-13 14:01:21,336 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 14:01:21,399 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:24,562 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 14:01:24,870 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 14:01:26,345 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 14:01:26,345 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:27,751 INFO p.j.t.p.HomePage [main] Login page is opened
+2023-11-13 14:01:27,753 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:27,754 INFO p.j.t.p.LoginPage [main] Copywrite text on the Login page received
+2023-11-13 14:01:28,360 INFO p.j.t.s.Singleton [main] Driver is closed
+2023-11-13 14:01:28,389 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:31,473 INFO p.j.t.p.HomePage [main] The site https://jysk.pl/ is opened
+2023-11-13 14:01:31,866 INFO p.j.t.p.HomePage [main] Sent consent for cookies.
+2023-11-13 14:01:33,234 INFO p.j.t.p.HomePage [main] Advertisement closed.
+2023-11-13 14:01:33,235 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:33,409 INFO p.j.t.p.HomePage [main] Query sent to the search box:Krzes?a
+2023-11-13 14:01:35,040 INFO p.j.t.p.HomePage [main] A search is in progress
+2023-11-13 14:01:35,046 INFO p.j.t.s.Singleton [main] Perform driver
+2023-11-13 14:01:35,443 INFO p.j.t.p.ChairPage [main] A filter by price is applied.
+2023-11-13 14:01:35,864 INFO p.j.t.p.ChairPage [main] Min price - 450
+2023-11-13 14:01:36,471 INFO p.j.t.p.ChairPage [main] Maximum price - 500
+2023-11-13 14:01:36,613 INFO p.j.t.p.ChairPage [main] A filter by category is applied.
+2023-11-13 14:01:37,103 INFO p.j.t.p.ChairPage [main] Selected category - Krzes?a biurowe
+2023-11-13 14:01:37,519 INFO p.j.t.p.ChairPage [main] List sorted by rating
+2023-11-13 14:01:37,520 INFO p.j.t.p.ChairPage [main] A list with search results has been created
+2023-11-13 14:01:37,662 INFO p.j.t.p.ChairPage [main] Created list with prices of goods
+2023-11-13 14:01:38,313 INFO p.j.t.s.Singleton [main] Driver is closed

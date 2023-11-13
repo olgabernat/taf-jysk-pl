@@ -4,10 +4,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.equalTo;
 
 public class LoginTest {
     private static final String BASE_URL = "https://jysk.pl/wss/json/v2/data/customer/session";
+
     @DisplayName("Check login with empty data")
     @Test
     public void testPostEmptyEmailAndPassword() {
@@ -15,15 +18,15 @@ public class LoginTest {
                 "    \"email\": \"\",\n" +
                 "    \"password\": \"\"\n" +
                 "}";
+        String expectedError1 = "Invalid credentials: Either email, mobile, or username must be provided";
+        String expectedError2 = "Please enter a valid e-mail";
+
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
                 .then().assertThat().statusCode(400)
-                .body("translationDefaultText",
-                        equalTo("Invalid input"))
-                .body("errorDetails[0].translationDefaultText",
-                        equalTo("Invalid credentials: Either email, mobile, or username must be provided"))
-                .body("errorDetails[1].translationDefaultText",
-                        equalTo("Please enter a valid e-mail"));
+                .body("translationDefaultText", equalTo("Invalid input"))
+                .body("errorDetails.flatten().translationDefaultText",
+                        containsInAnyOrder(expectedError1, expectedError2));
     }
 
     @DisplayName("Check login with empty password")
@@ -33,13 +36,12 @@ public class LoginTest {
                 "    \"email\": \"test@test.com\",\n" +
                 "    \"password\": \"\"\n" +
                 "}";
+
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
                 .then().assertThat().statusCode(401)
-                .body("translationDefaultText",
-                        equalTo("Insufficient permissions"))
-                .body("errorDetails[0].translationDefaultText",
-                        equalTo("Login of ${username} failed"));
+                .body("translationDefaultText", equalTo("Insufficient permissions"))
+                .body("errorDetails.flatten().translationDefaultText", containsInAnyOrder("Login of ${username} failed"));
     }
 
     @DisplayName("Check login with empty email")
@@ -49,13 +51,14 @@ public class LoginTest {
                 "    \"email\": \"\",\n" +
                 "    \"password\": \"123456aA\"\n" +
                 "}";
+        String expectedError1 = "Invalid credentials: Either email, mobile, or username must be provided";
+        String expectedError2 = "Please enter a valid e-mail";
+
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
                 .then().assertThat().statusCode(400)
-                .body("translationDefaultText",
-                        equalTo("Invalid input"))
-                .body("errorDetails[1].translationDefaultText",
-                        equalTo("Please enter a valid e-mail"));
+                .body("translationDefaultText", equalTo("Invalid input"))
+                .body("errorDetails.flatten().translationDefaultText", containsInAnyOrder(expectedError1, expectedError2));
     }
 
     @DisplayName("Check login by unregistered user")
@@ -65,13 +68,13 @@ public class LoginTest {
                 "    \"email\": \"test@test.com\",\n" +
                 "    \"password\": \"123456aA\"\n" +
                 "}";
+
         given().header("Content-Type", "application/json").body(body).
                 when().post(BASE_URL)
                 .then().assertThat().statusCode(401)
                 .body("translationDefaultText",
                         equalTo("Insufficient permissions"))
-                .body("errorDetails[0].translationDefaultText",
-                        equalTo("Login of ${username} failed"));
+                .body("errorDetails.flatten().translationDefaultText", hasItem("Login of ${username} failed"));
     }
 
     @DisplayName("Check login without password")
@@ -85,8 +88,7 @@ public class LoginTest {
                 .then().assertThat().statusCode(400)
                 .body("translationDefaultText",
                         equalTo("Invalid input"))
-                .body("errorDetails[0].translationDefaultText",
-                        equalTo("Please enter a password"));
+                .body("errorDetails.flatten().translationDefaultText", hasItem("Please enter a password"));
     }
 
     @DisplayName("Check login without email")
@@ -100,7 +102,6 @@ public class LoginTest {
                 .then().assertThat().statusCode(400)
                 .body("translationDefaultText",
                         equalTo("Invalid input"))
-                .body("errorDetails[1].translationDefaultText",
-                        equalTo("Please enter your e-mail"));
+                .body("errorDetails.flatten().translationDefaultText", hasItem("Please enter your e-mail"));
     }
 }
