@@ -29,4 +29,47 @@ public class LoginPageTest extends BaseTest {
         String expectedError = "Login of test@test.com failed";
         Assertions.assertEquals(expectedError, actualError);
     }
+
+    @Test
+    public void testLoginEmptyPassword() {
+        HomePage homePage = new HomePage();
+        homePage.clickButtonLogin();
+        LoginPage loginPage = new LoginPage();
+        loginPage.enterEmail("test@test.com")
+                .enterPassword("")
+                .clickLoginButton();
+
+        String actualError = loginPage.getAlertMessage();
+        String expectedError = "To pole jest wymagane.";
+        Assertions.assertEquals(expectedError, actualError);
+    }
+
+    @Test
+    public void testLoginEmptyEmail() {
+        HomePage homePage = new HomePage();
+        homePage.clickButtonLogin();
+        LoginPage loginPage = new LoginPage();
+        loginPage.enterEmail("")
+                .enterPassword("test123")
+                .clickLoginButton();
+
+        String actualError = loginPage.getAlertMessage();
+        String expectedError = "To pole jest wymagane.";
+        Assertions.assertEquals(expectedError, actualError);
+    }
+
+    @Test
+    public void testLoginInvalidEmail() {
+        HomePage homePage = new HomePage();
+        homePage.clickButtonLogin();
+        LoginPage loginPage = new LoginPage();
+        loginPage.enterEmail("qwer")
+                .enterPassword("test123")
+                .clickLoginButton();
+
+        String actualError = loginPage.getAlertMessage();
+        String expectedError = "Wprowadź poprawny adres e-mail.";
+        Assertions.assertEquals(expectedError, actualError);
+    }
+
 }
